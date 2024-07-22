@@ -1,0 +1,10 @@
+@import "materialize-css/dist/css/materialize.min.css";
+
+.initial{
+    position: relative !important;
+    margin-left: 30px;
+}
+
+.nav-wrapper ul a{
+    color: #616161;
+}
