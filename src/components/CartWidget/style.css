@@ -1,0 +1,9 @@
+div .shopp a{
+    float: right!important;
+    display:flex;
+    margin-right:10px;
+}
+
+div .shopp a:hover{
+    background-color: transparent!important;
+}

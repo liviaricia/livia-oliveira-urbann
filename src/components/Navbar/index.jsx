@@ -1,3 +1,5 @@
+import CartWidget from "../CartWidget";
+import ItemListContainer from "../ItemListContainer";
 import "./style.css";
 
 function NavBar() {
@@ -12,9 +14,12 @@ function NavBar() {
                         <li><a href="#">Feminino</a></li>
                         <li><a href="#">Quem somos</a></li>
                         <li><a href="#">FAQ</a></li>
+                        <li><CartWidget/></li>
                     </ul>
+                   
                 </div>
             </nav>
+            <ItemListContainer/>
         </div>
     );
 }
