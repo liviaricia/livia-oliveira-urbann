@@ -1,4 +1,5 @@
 import "./style.css";
+import ItemCount from "../ItemCount";
 
 function ItemListContainer() {
     return (
@@ -12,6 +13,7 @@ function ItemListContainer() {
                         <div class="item">
                             <span class="card-title">Camiseta branca feminina</span><br />
                             <span class="value black-text">R$45,00</span>
+                            <ItemCount/>
                         </div>
                         <div class="card-action blue-grey">
                             <a href="#">Adicionar no carrinho</a>
@@ -26,6 +28,7 @@ function ItemListContainer() {
                         <div class="item">
                             <span class="card-title">Camiseta branca feminina</span><br />
                             <span class="value black-text">R$45,00</span>
+                            <ItemCount/>
                         </div>
                         <div class="card-action blue-grey">
                             <a href="#">Adicionar no carrinho</a>
@@ -40,6 +43,7 @@ function ItemListContainer() {
                         <div class="item">
                             <span class="card-title">Camiseta branca feminina</span><br />
                             <span class="value black-text">R$45,00</span>
+                            <ItemCount/>
                         </div>
                         <div class="card-action blue-grey">
                             <a href="#">Adicionar no carrinho</a>
@@ -56,6 +60,7 @@ function ItemListContainer() {
                         <div class="item">
                             <span class="card-title">Camiseta branca feminina</span><br />
                             <span class="value black-text">R$45,00</span>
+                            <ItemCount/>
                         </div>
                         <div class="card-action blue-grey">
                             <a href="#">Adicionar no carrinho</a>
@@ -70,6 +75,7 @@ function ItemListContainer() {
                         <div class="item">
                             <span class="card-title">Camiseta branca feminina</span><br />
                             <span class="value black-text">R$45,00</span>
+                            <ItemCount/>
                         </div>
                         <div class="card-action blue-grey">
                             <a href="#">Adicionar no carrinho</a>
@@ -84,6 +90,7 @@ function ItemListContainer() {
                         <div class="item">
                             <span class="card-title">Camiseta branca feminina</span><br />
                             <span class="value black-text">R$45,00</span>
+                            <ItemCount/>
                         </div>
                         <div class="card-action blue-grey">
                             <a href="#">Adicionar no carrinho</a>
