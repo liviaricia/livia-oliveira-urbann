@@ -28,3 +28,5 @@ export function ItemCount({ stock, count, setCount }) {
         </div>
     );
 }
+
+//comentario para fazer o commit novamente pois o primeiro commit das alterações foi incompleto

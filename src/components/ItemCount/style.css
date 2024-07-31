@@ -5,7 +5,7 @@
 }
 
 input.qtd{
-    text-align: center;
+    text-align: center!important;
     background-color: white!important;
     margin: 0 30px!important;
 }
