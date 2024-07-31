@@ -1,0 +1,19 @@
+.qtdItems{
+    display: inline-flex;
+    text-align: center;
+    margin: 0!important;
+}
+
+input.qtd{
+    text-align: center;
+    background-color: white!important;
+    margin: 0 30px!important;
+}
+
+button.qtd{
+    width: 50px;
+    height: 30px;
+    margin-top: 7px;
+    border-radius: 30px;
+    border: 0px;
+}
