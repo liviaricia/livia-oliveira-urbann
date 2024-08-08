@@ -1,7 +1,6 @@
 //map
 import "./style.css";
 import React, { useState, useEffect } from 'react';
-import ItemCount from "../ItemCount";
 import Item from '../Item';
 
 function ItemList() {
