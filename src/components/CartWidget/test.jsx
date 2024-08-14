@@ -1,6 +1,6 @@
 import "./style.css";
 
-function Test() {
+function Checkout() {
     return (
         <div>
         <h1>blablabla</h1>
@@ -8,4 +8,4 @@ function Test() {
     );
 }
 
-export default Test;
+export default Checkout;

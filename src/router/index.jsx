@@ -19,7 +19,7 @@ const AppRouter = () => (
             {/* <Route exact path="/item:filter?" element={<Item />} /> */}
             {/* <Route path="/item-details" element={<Item/>}/> */}
             <Route path="/" element={<ItemListContainer/>}/>
-            <Route path="/checkout" element={<Test/>}/>
+            <Route path="/cart" element={<Test/>}/>
             <Route path="/items/:id" element={<ItemDetailContainer/>}/>
         </Routes>
     </Router>
