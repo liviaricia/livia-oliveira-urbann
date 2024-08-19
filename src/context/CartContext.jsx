@@ -9,35 +9,7 @@ export default function CartProvider({ children }) {
         return cart.find(obj => obj.id === id);
     }
 
-    /* function addToCart(item) {
-        if (isInCart(item.id)) {
-            setCart(prevCart => {
-                const updatedCart = prevCart.map(obj =>
-                    obj.id === item.id ? { ...obj, count: obj.count + item.count } : obj
-                );
-                return updatedCart;
-            });
-            console.log(cart);
-        } else {
-            setCart([...cart, item]);
-        }
-    }; */
-
-    /* function addToCart(item) {
-        console.log(item);
-        setCart((prevCart) => {
-          const itemInCart = prevCart.find((obj) => obj.id === item.id);
-          if (itemInCart) {
-            return prevCart.map((obj) =>
-              obj.id === item.id ? { ...obj, count: obj.count + item.count } : obj
-            );
-          }
-          return [...prevCart, item];
-        });
-      } */
-
     function addToCart(item) {
-        console.log(item);
         if (isInCart(item.id)) {
             setCart(prevCart => {
                 const updatedCart = prevCart.map(obj =>
@@ -45,8 +17,6 @@ export default function CartProvider({ children }) {
                 );
                 return updatedCart;
             });
-            /* console.log(cart); */
-
         } else {
             setCart([...cart, item]);
         }
@@ -65,10 +35,8 @@ export default function CartProvider({ children }) {
         let count = 0;
          cart.forEach((item) => {
              count += item.count;
-             console.log(item);
          });
          
-         /* console.log(count); */
          
          return count;
         // return cart.reduce((count, item) => count + item.count, 0);
