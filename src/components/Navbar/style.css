@@ -3,7 +3,15 @@
     margin-left: 30px;
 }
 
+nav{
+    box-shadow: none!important;
+    border-bottom: 1px solid #000;
+}
+
 .nav-wrapper ul a{
     color: #616161;
 }
 
+.brand-logo img{
+    width: 200px;
+}

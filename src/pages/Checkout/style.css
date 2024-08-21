@@ -1,0 +1,36 @@
+.shopping{
+    text-align: left;
+    margin-left: 3%;
+    box-shadow: none;
+    width: 47%;
+}
+
+.cart{
+    display: inline-block;
+
+}
+
+.cart img{
+    object-fit: contain;
+    height: 250px;
+}
+.cart.item{
+    display: inline-block;
+    top: -55px;
+    margin-top: -27px;
+    position: relative;
+}
+   
+
+.shopping-total{
+    text-align: left;
+    position: absolute;
+    top: 30%;
+    right: 3%;
+    width: 47%;
+    padding: 20px;
+    border: 1px solid #d4d3cf;
+}
+.shopping-total p{
+    font-size: larger;
+}

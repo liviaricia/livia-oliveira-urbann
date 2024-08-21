@@ -3,25 +3,22 @@ import Test from "../CartWidget";
 import ItemListContainer from "../ItemListContainer";
 import "./style.css";
 import { Link } from 'react-router-dom';
+import logo from '../../LogoURBANN.png'
 
 function NavBar() {
     return (
-        <div className="App">
-            <nav>
-                <div class="nav-wrapper blue-grey lighten-4">
-                <a href="/" class="left initial brand-logo blue-grey-text">URBANN</a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="#">Masculino</a></li>
-                        <li><a href="#">Feminino</a></li>
-                        <li><a href="#">Quem somos</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><CartWidget/></li>
-                    </ul>
-                   
-                </div>
-            </nav>
-        </div>
+        <nav>
+            <div class="nav-wrapper indigo lighten-5">
+                <Link to="/" class="left initial brand-logo"><img src={logo} alt="Logo"/></Link>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/produtos">Produtos</Link></li>
+                    <li><Link to="/">Quem somos</Link></li>
+                    <li><Link to="/">FAQ</Link></li>
+                    <li><CartWidget /></li>
+                </ul>
+            </div>
+        </nav>
     );
 }
 
