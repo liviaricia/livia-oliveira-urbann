@@ -1,14 +1,10 @@
 import React, { useState } from "react";
-/* import { useCart } from "../context/CartProvider"; */
 import { useCart } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import "./style.css";
-import { ItemCount } from "../../components/ItemCount";
 import { items } from "../../components/Item";
 
 function Checkout() {
-    /*     const { cartQtd } = useCart(); */
-    const [count, setCount] = useState(1);
     const { cart, cartTotal, cleanCart, addToCart, removeFromCart } = useCart();
 
     const [counts, setCounts] = useState(
@@ -44,6 +40,21 @@ function Checkout() {
         });
     } */
 
+    const order = {
+        buyer: {
+            name: "Lívia", email: "email@email.com",
+        },
+        items: [...cart],
+        total: cartTotal()
+    }
+    console.log(order);
+    function finalizarcompra(){
+        console.log(order);
+        alert("Obrigada por comprar conosco!");
+        cleanCart();
+    }
+
+
     if (cart.length === 0) {
         return <div>
             <h3>Ops! Parece que seu carrinho está vazio 😥</h3>
@@ -78,7 +89,7 @@ function Checkout() {
             <div class="shopping-total">
                 <p><strong>Total: R$ {cartTotal()}</strong></p>
                 <div className="card-action indigo darken-4">
-                    <Link>Finalizar minha compra </Link>
+                    <Link onClick={finalizarcompra}>Finalizar minha compra </Link>
                 </div><br />
                 <div className="card-action indigo lighten-5">
                     <Link onClick={cleanCart} class="indigo-text text-darken-2">Esvaziar carrinho</Link>
