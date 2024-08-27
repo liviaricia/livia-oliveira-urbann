@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useCart } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import "./style.css";
 import { items } from "../../components/Item";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "../../services/firebase";
 
 function Checkout() {
     const { cart, cartTotal, cleanCart, removeFromCart } = useCart();
@@ -40,18 +42,31 @@ function Checkout() {
         });
     } */
 
-    const order = {
-        buyer: {
-            name: "Lívia", email: "email@email.com",
-        },
-        items: [...cart],
-        total: cartTotal()
-    }
-    console.log(order);
-    function finalizarcompra(){
+    async function finalizarcompra(order) {
+        try {
+            const docRef = await addDoc(collection(db, 'pedidos'), {
+                customer: {
+                    name: "Lívia", email: "email@email.com", phone: "(11) 98654-3842",
+                },
+                pedido: {
+                    items: [...cart], // Ex: [{ produtoId: 1, quantidade: 2 }, ...]
+                    total: cartTotal(), // Valor total do pedido
+                    data: new Date(), // Data do pedido
+                    numPedido: Math.floor(Math.random() * 1000),
+                },
+            });
+
+            console.log('Pedido enviado com sucesso: ', docRef.id);
+            alert("Obrigada por comprar conosco!");
+            cleanCart();
+        } catch (e) {
+            console.error('Erro ao enviar o pedido: ', e);
+            alert("Ops, algo de estranho aconteceu: ", e);
+        }
+
         console.log(order);
-        alert("Obrigada por comprar conosco!");
-        cleanCart();
+
+
     }
 
 

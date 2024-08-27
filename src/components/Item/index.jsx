@@ -42,7 +42,7 @@ function Item() {
             ...item,
             count: counts[item.id]
         });
-        console.log(counts[item.id]);
+        /* console.log(counts[item.id]); */
     };
 
     const updateCount = (id, newCount) => {
