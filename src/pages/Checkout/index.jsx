@@ -5,16 +5,16 @@ import "./style.css";
 import { items } from "../../components/Item";
 
 function Checkout() {
-    const { cart, cartTotal, cleanCart, addToCart, removeFromCart } = useCart();
+    const { cart, cartTotal, cleanCart, removeFromCart } = useCart();
 
-    const [counts, setCounts] = useState(
+    const [counts] = useState(
         items.reduce((acc, item) => {
             acc[item.id] = 0;
             return acc;
         }, {})
     );
 
-    const updateCount = (id, newCount) => {
+    /* const updateCount = (id, newCount) => {
         setCounts(prevCounts => ({
             ...prevCounts,
             [id]: newCount
@@ -27,7 +27,7 @@ function Checkout() {
             count: counts[item.id]
         });
         alert(counts[item.id])
-    };
+    }; */
 
     const remove = (item, count) => {
         removeFromCart(item, count);

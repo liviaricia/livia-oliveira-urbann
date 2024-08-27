@@ -36,8 +36,6 @@ export default function CartProvider({ children }) {
          cart.forEach((item) => {
              count += item.count;
          });
-         
-         
          return count;
         // return cart.reduce((count, item) => count + item.count, 0);
     }
@@ -69,7 +67,7 @@ export default function CartProvider({ children }) {
     }
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart, isInCart, cartQtd, cartTotal, addItem, removeItem, cleanCart }}>
+        <CartContext.Provider value={{ cart, getFromCart, addToCart, removeFromCart, isInCart, cartQtd, cartTotal, addItem, removeItem, cleanCart }}>
             {children}
         </CartContext.Provider>
     );
@@ -78,9 +76,9 @@ export default function CartProvider({ children }) {
 export function useCart() {
     const context = useContext(CartContext);
 
-    /*  if (!context) {
+     if (!context) {
          throw new Error('Para usar o useCart seu componente precisa estar dentro do CartProvider');
-     } */
+     } 
 
     return context;
 }

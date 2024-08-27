@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ItemDetail from '../ItemDetail';
+import { Loading } from '../Loading';
 
 function ItemDetailContainer() {
     const [isMounted, setIsMounted] = useState(false);
@@ -21,7 +22,7 @@ function ItemDetailContainer() {
         {isMounted ? (
             <div><ItemDetail /></div>
         ) : (
-            <div><img src="https://www.icegif.com/wp-content/uploads/2023/07/icegif-1263.gif" width="200px" /></div>
+            <Loading/>
         )}
     </div>
 }

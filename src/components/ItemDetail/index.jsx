@@ -24,7 +24,7 @@ function ItemDetail() {
                 <h4>R${items[id].price}</h4>
                 <h4>Descrição</h4>
                 <p>{items[id].description}</p>
-                <ItemCount count={count} setCount={setCount} stock={items[id].stock} onclick={submit}/>
+                <ItemCount count={count} setCount={setCount} stock={items[id].stock} onclick={submit} />
                 <p>Estoque disponível: {items[id].stock}</p>
             </div>
         </div>
